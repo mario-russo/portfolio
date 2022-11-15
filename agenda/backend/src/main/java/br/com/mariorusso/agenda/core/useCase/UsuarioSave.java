@@ -9,7 +9,7 @@ import br.com.mariorusso.agenda.core.repository.CreateUsuario;
  * 
  * @author Mário Russo
  */
-public class UsuarioSaveService {
+public class UsuarioSave {
 
     public final CreateUsuario createUsuario;
 
@@ -18,7 +18,7 @@ public class UsuarioSaveService {
      * 
      * @param createUsuario
      */
-    public UsuarioSaveService(CreateUsuario createUsuario) {
+    public UsuarioSave(CreateUsuario createUsuario) {
         this.createUsuario = createUsuario;
     }
 
