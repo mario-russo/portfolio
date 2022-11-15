@@ -17,7 +17,7 @@ import br.com.mariorusso.agenda.core.model.responseDto.UsuarioResponseDto;
 import br.com.mariorusso.agenda.core.repository.CreateUsuario;
 
 @ExtendWith(MockitoExtension.class)
-public class UsuarioSaveServiceTest {
+public class UsuarioSaveTest {
     @InjectMocks
     private UsuarioSave saveService;
     private Usuario usuario;
