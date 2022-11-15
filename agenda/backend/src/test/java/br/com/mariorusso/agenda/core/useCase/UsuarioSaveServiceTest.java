@@ -11,9 +11,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
-
 import br.com.mariorusso.agenda.core.model.TipoUsuario;
 import br.com.mariorusso.agenda.core.model.Usuario;
+import br.com.mariorusso.agenda.core.model.responseDto.UsuarioResponseDto;
 import br.com.mariorusso.agenda.core.repository.CreateUsuario;
 
 @ExtendWith(MockitoExtension.class)
@@ -27,14 +27,18 @@ public class UsuarioSaveServiceTest {
 
     @Test
     void testSalvar() {
+        UsuarioResponseDto usuriarioDto = new UsuarioResponseDto(usuario);
 
-        when(createUsuario.execute(any())).thenReturn(usuario);
+        when(createUsuario.execute(any())).thenReturn(usuriarioDto);
 
-        Usuario resposta  = saveService.salvar(usuario);
+        UsuarioResponseDto resposta = saveService.salvar(usuario);
+
+        assertEquals(UsuarioResponseDto.class, resposta.getClass());
 
         assertEquals("mario", resposta.getNome());
         assertEquals("mario@russo", resposta.getEmail());
-       
+        verify(createUsuario).execute(usuario);
+
     }
 
     @BeforeEach
