@@ -3,8 +3,9 @@ package br.com.mariorusso.agenda.core.model.responseDto;
 import br.com.mariorusso.agenda.core.model.Usuario;
 
 /**
+ * Classe para retorna um Objeto usuário sem a senha
+ * 
  * @author Mário Russo
- *         Classe para retorna um Objeto usuário sem a senha
  */
 public class UsuarioResponseDto {
     private long id;
@@ -13,8 +14,9 @@ public class UsuarioResponseDto {
     private String tipo;
 
     /**
+     * Recebe um usuario e converte em DTO
+     * 
      * @param usuario
-     *                Recebe um usuario e converte em DTO
      *
      */
     public UsuarioResponseDto(Usuario usuario) {
