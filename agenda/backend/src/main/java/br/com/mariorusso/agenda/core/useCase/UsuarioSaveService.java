@@ -4,14 +4,28 @@ import br.com.mariorusso.agenda.core.model.Usuario;
 import br.com.mariorusso.agenda.core.model.responseDto.UsuarioResponseDto;
 import br.com.mariorusso.agenda.core.repository.CreateUsuario;
 
+/**
+ * Serviço para salvar o usuário
+ * 
+ * @author Mário Russo
+ */
 public class UsuarioSaveService {
 
     public final CreateUsuario createUsuario;
 
+    /**
+     * Depende de um contrato CreateUsuario
+     * 
+     * @param createUsuario
+     */
     public UsuarioSaveService(CreateUsuario createUsuario) {
         this.createUsuario = createUsuario;
     }
 
+    /**
+     * @param usuario
+     * @return UsuarioResponseDto
+     */
     public UsuarioResponseDto salvar(Usuario usuario) {
         return createUsuario.execute(usuario);
     }
