@@ -20,10 +20,11 @@ import br.com.mariorusso.agenda.core.repository.CreateUsuario;
 public class UsuarioSaveTest {
     @InjectMocks
     private UsuarioSave saveService;
-    private Usuario usuario;
 
     @Mock
     private CreateUsuario createUsuario;
+
+    private Usuario usuario;
 
     @Test
     void testSalvar() {
