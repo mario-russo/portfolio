@@ -14,38 +14,70 @@ public class Usuario {
         setTipoUsuario(tipo);
     }
 
+    /**
+     * Enum 
+     * ROLE_ADM,
+     * ROLE_CLIENTE,
+     * ROLE_FUNCIONARIO;
+     * 
+     * @return TipoUsuario
+     */
     public TipoUsuario getTipoUsuario() {
         return tipo;
     }
 
+    /**
+     * @param tipo
+     */
     public void setTipoUsuario(TipoUsuario tipo) {
         this.tipo = tipo;
     }
 
+    /**
+     * @return
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * @return String
+     */
     public String getNome() {
         return nome;
     }
 
+    /**
+     * @param  String 
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    /**
+     * @return String
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     * @param email
+     */
     public void setEmail(String email) {
         this.email = email;
     }
 
+    /**
+     * @return String 
+     */
     public String getSenha() {
         return senha;
     }
 
+    /**
+     * @param senha
+     */
     public void setSenha(String senha) {
         this.senha = senha;
     }
