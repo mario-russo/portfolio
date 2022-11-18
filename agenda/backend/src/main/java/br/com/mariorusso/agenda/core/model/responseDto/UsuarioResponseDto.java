@@ -26,6 +26,9 @@ public class UsuarioResponseDto {
         tipo = usuario.getTipoUsuario().toString();
     }
 
+    /**
+     * @return
+     */
     public long getId() {
         return id;
     }
