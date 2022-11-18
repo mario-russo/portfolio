@@ -19,7 +19,7 @@ import br.com.mariorusso.agenda.core.repository.CreateUsuario;
 @ExtendWith(MockitoExtension.class)
 public class UsuarioSaveTest {
     @InjectMocks
-    private UsuarioSave saveService;
+    private SalvaUsuario saveService;
 
     @Mock
     private CreateUsuario createUsuario;
@@ -46,6 +46,6 @@ public class UsuarioSaveTest {
     public void init() {
         MockitoAnnotations.openMocks(this);
         usuario = new Usuario("mario", "mario@russo", "1234", TipoUsuario.ROLE_CLIENTE);
-        saveService = new UsuarioSave(createUsuario);
+        saveService = new SalvaUsuario(createUsuario);
     }
 }
